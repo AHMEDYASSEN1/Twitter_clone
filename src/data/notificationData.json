@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "type": "like",
+    "userImage": "https://images.pexels.com/photos/14807470/pexels-photo-14807470.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "message": "Mike Johnson liked your tweet.",
+    "timestamp": "2024-06-25T14:48:00.000Z"
+  },
+  {
+    "id": 2,
+    "type": "retweet",
+    "userImage": "https://images.pexels.com/photos/9545892/pexels-photo-9545892.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "message": "Jane Smith retweeted your tweet.",
+    "timestamp": "2024-06-25T15:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "type": "follow",
+    "userImage": "https://images.pexels.com/photos/4412934/pexels-photo-4412934.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "message": "Alice followed you.",
+    "timestamp": "2024-06-25T15:30:00.000Z"
+  },
+  {
+    "id": 2,
+    "type": "retweet",
+    "userImage": "https://images.pexels.com/photos/20954282/pexels-photo-20954282/free-photo-of-woman-wearing-a-denim-jacket.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+    "message": "Jane Smith retweeted your tweet.",
+    "timestamp": "2024-06-25T15:00:00.000Z"
+  },
+  {
+    "id": 1,
+    "type": "like",
+    "userImage": "https://images.pexels.com/photos/20954282/pexels-photo-20954282/free-photo-of-woman-wearing-a-denim-jacket.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+    "message": "Jane Smith liked your tweet.",
+    "timestamp": "2024-06-25T14:48:00.000Z"
+  },
+  {
+    "id": 3,
+    "type": "follow",
+    "userImage": "https://images.pexels.com/photos/2694040/pexels-photo-2694040.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+    "message": "Sophia Anderson followed you.",
+    "timestamp": "2024-06-25T15:30:00.000Z"
+  }
+]

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.like {
+  background-color: red;
+}
+
+.retweet {
+  background-color: green;
+}
+
+.follow {
+  background-color: blue;
+} */
+
+.scrollable-container {
+  height: 100%;
+  overflow: auto; /* Enable scrolling */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.scrollable-container {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}

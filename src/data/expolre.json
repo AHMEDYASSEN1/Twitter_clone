@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "trendName": "#TechNews",
+    "tweetCount": "120K Tweets",
+    "description": "Latest updates in technology."
+  },
+  {
+    "id": 2,
+    "trendName": "#WorldCup2024",
+    "tweetCount": "500K Tweets",
+    "description": "All the highlights and updates from the World Cup 2024."
+  },
+  {
+    "id": 3,
+    "trendName": "#ClimateChange",
+    "tweetCount": "300K Tweets",
+    "description": "Discussions and news about climate change."
+  },
+  {
+    "id": 4,
+    "trendName": "#NewMusicFriday",
+    "tweetCount": "200K Tweets",
+    "description": "Latest music releases for the weekend."
+  },
+  {
+    "id": 5,
+    "trendName": "#COVID19",
+    "tweetCount": "1M Tweets",
+    "description": "Updates and news about the COVID-19 pandemic."
+  },
+  {
+    "id": 6,
+    "trendName": "#Oscars2024",
+    "tweetCount": "450K Tweets",
+    "description": "News and highlights from the Oscars 2024."
+  },
+  {
+    "id": 7,
+    "trendName": "#Gaming",
+    "tweetCount": "250K Tweets",
+    "description": "Latest news and updates in the gaming world."
+  },
+  {
+    "id": 8,
+    "trendName": "#Fitness",
+    "tweetCount": "180K Tweets",
+    "description": "Tips and trends in fitness."
+  },
+  {
+    "id": 9,
+    "trendName": "#SpaceX",
+    "tweetCount": "350K Tweets",
+    "description": "Latest news and updates about SpaceX."
+  },
+  {
+    "id": 10,
+    "trendName": "#RecipeOfTheDay",
+    "tweetCount": "90K Tweets",
+    "description": "Delicious recipes shared by users."
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "user": {
+      "name": "John Doe",
+      "handle": "john_doe",
+      "profileImage": "https://via.placeholder.com/48"
+    },
+    "content": "Just had an amazing coffee at the new cafe down the street! ☕️",
+    "postImage": null,
+    "time": "2h",
+    "comments": 5,
+    "retweets": 10,
+    "likes": 20,
+    "view": 110
+  },
+  {
+    "id": 2,
+    "user": {
+      "name": "Jane Smith",
+      "handle": "jane_smith",
+      "profileImage": "https://via.placeholder.com/48"
+    },
+    "content": "Loving the new features in the latest update of our app! 🚀",
+    "postImage": null,
+    "time": "3h",
+    "comments": 12,
+    "retweets": 8,
+    "likes": 34,
+    "view": 121
+  },
+  {
+    "id": 3,
+    "user": {
+      "name": "Alice Johnson",
+      "handle": "alice_j",
+      "profileImage": "https://via.placeholder.com/48"
+    },
+    "content": "Happy to announce that I’ll be speaking at the upcoming tech conference! 🎤",
+    "postImage": null,
+    "time": "4h",
+    "comments": 9,
+    "retweets": 14,
+    "likes": 45,
+    "view": 254
+  },
+  {
+    "id": 4,
+    "user": {
+      "name": "Bob Brown",
+      "handle": "bob_brown",
+      "profileImage": "https://via.placeholder.com/48"
+    },
+    "content": "Check out this beautiful sunset from my hike today! 🌅 #NatureLover",
+    "postImage": null,
+    "time": "5h",
+    "comments": 7,
+    "retweets": 4,
+    "likes": 50,
+    "view": 490
+  },
+  {
+    "id": 5,
+    "user": {
+      "name": "Emma Wilson",
+      "handle": "emma_w",
+      "profileImage": "https://via.placeholder.com/48"
+    },
+    "content": "Anyone else excited for the weekend? 🙌",
+    "postImage": null,
+    "time": "6h",
+    "comments": 15,
+    "retweets": 12,
+    "likes": 60,
+    "view": 350
+  },
+  {
+    "id": 6,
+    "user": {
+      "name": "John Doe",
+      "handle": "john_doe",
+      "profileImage": "https://via.placeholder.com/48"
+    },
+    "content": "Check out this beautiful sunset from my hike today! 🌅 #NatureLover",
+    "postImage": null,
+    "time": "2h",
+    "comments": 5,
+    "retweets": 10,
+    "likes": 20,
+    "view": 110
+  },
+  {
+    "id": 7,
+    "user": {
+      "name": "John Doe",
+      "handle": "john_doe",
+      "profileImage": "https://via.placeholder.com/48"
+    },
+    "content": "Just had an amazing coffee at the new cafe down the street! ☕️",
+    "postImage": null,
+    "time": "2h",
+    "comments": 5,
+    "retweets": 10,
+    "likes": 20,
+    "view": 110
+  }
+]
