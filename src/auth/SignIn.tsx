@@ -5,7 +5,11 @@ import { auth } from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-const SignIn = () => {
+interface SignInProps {
+  setIsSigned: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SignIn: React.FC<SignInProps> = ({ setIsSigned }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -46,13 +50,14 @@ const SignIn = () => {
       }
       setEmail("");
       setPassword("");
+      setIsSigned(true);
       navigate("/");
     }
   };
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <form className="rounded-xl w-[28%] px-8 pt-6 pb-8 mb-4 border-[1px] border-gray-600">
+      <form className="rounded-xl w-[28%] min-w-[350px] px-8 pt-6 pb-8 mb-4 border-[1px] border-gray-600">
         <h2 className="text-2xl font-bold text-center mb-4">Sign in to X</h2>
         <button className="bg-white py-2 px-8 w-full rounded-full text-black font-semibold flex items-center justify-center gap-2">
           <FaGoogle />

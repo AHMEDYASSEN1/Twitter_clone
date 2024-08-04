@@ -1,14 +1,19 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { auth } from "../config/firebase.ts";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, googleProvider } from "../config/firebase.ts";
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+interface SignUpProps {
+  setIsSigned: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const SignUp: React.FC<SignUpProps> = ({ setIsSigned }) => {
   const [createAccount, setCreateAccount] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // const user = auth.currentUser;
 
   const [formInputsValidity, setFormInputsValidity] = useState({
     emailIsValid: true,
@@ -24,8 +29,6 @@ const SignUp = () => {
   const passwordValidity = (value: string) => {
     return value.trim().length >= 6;
   };
-
-  // check v17 in react course and fix some things.
 
   const signUpHandler = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -49,17 +52,35 @@ const SignUp = () => {
       }
       setEmail("");
       setPassword("");
+      setIsSigned(true);
       navigate("/");
     }
   };
 
+  const SignUpWithGoogleHandler = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+    } catch (err) {
+      console.log(err);
+    }
+    setEmail("");
+    setPassword("");
+    setIsSigned(true);
+    navigate("/");
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <h1 className="text-[70px] font-bold">Happening now</h1>
-      <h3 className="text-3xl font-bold my-8">Joun today.</h3>
-      <div className="w-[23%]">
+    <form className="flex flex-col justify-center items-center h-screen">
+      <h1 className="text-[70px] font-bold max-md:text-[50px] max-sm:text-[40px]">
+        Happening now
+      </h1>
+      <h3 className="text-3xl font-bold my-8 max-sm:text-2xl">Joun today.</h3>
+      <div className="w-[23%] min-w-[350px]">
         <div>
-          <button className="bg-white py-2 px-8 w-full rounded-full text-black font-semibold flex items-center justify-center gap-2">
+          <button
+            onClick={SignUpWithGoogleHandler}
+            className="bg-white py-2 px-8 w-full rounded-full text-black font-semibold flex items-center justify-center gap-2"
+          >
             <FaGoogle />
             join with google
           </button>
@@ -116,7 +137,7 @@ const SignUp = () => {
           </button>
         </Link>
       </div>
-    </div>
+    </form>
   );
 };
 
