@@ -51,7 +51,6 @@ const SignIn: React.FC<SignInProps> = ({ setIsSigned }) => {
       setEmail("");
       setPassword("");
       setIsSigned(true);
-      navigate("/");
     }
   };
 

@@ -66,7 +66,6 @@ const SignUp: React.FC<SignUpProps> = ({ setIsSigned }) => {
     setEmail("");
     setPassword("");
     setIsSigned(true);
-    navigate("/");
   };
 
   return (
