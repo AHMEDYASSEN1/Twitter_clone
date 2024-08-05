@@ -64,10 +64,6 @@ const SignUp = () => {
     } catch (err) {
       console.log(err);
     }
-    setEmail("");
-    setPassword("");
-    setIsSigned(true);
-    navigate("/");
   };
 
   return (
