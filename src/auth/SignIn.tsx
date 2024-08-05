@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { auth } from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-
 interface SignInProps {
   setIsSigned: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -17,8 +15,6 @@ const SignIn: React.FC<SignInProps> = ({ setIsSigned }) => {
     emailIsValid: true,
     passwordIsValid: true,
   });
-  const navigate = useNavigate();
-
   const emailValidity = (value: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(value);
@@ -51,7 +47,6 @@ const SignIn: React.FC<SignInProps> = ({ setIsSigned }) => {
       setEmail("");
       setPassword("");
       setIsSigned(true);
-      navigate("/");
     }
   };
 
