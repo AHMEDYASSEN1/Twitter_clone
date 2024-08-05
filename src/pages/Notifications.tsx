@@ -6,7 +6,7 @@ const Notifications: React.FC = () => {
   const notifications: Notification[] = data;
 
   return (
-    <div className="w-full">
+    <div className="w-full border-x-[1px] border-gray-500 max-sm:border-none">
       <h2 className="text-2xl font-bold p-4">Notifications</h2>
       <ul>
         {notifications.map((notification) => (

@@ -7,7 +7,7 @@ const Explore: React.FC = () => {
   const trends: TrendData[] = data;
 
   return (
-    <div>
+    <div className=" border-x-[1px] border-gray-500 max-sm:border-none">
       <div className="mx-4">
         <input
           className="w-full bg-slate-300 bg-opacity-10 py-2 px-4 rounded-full my-6"

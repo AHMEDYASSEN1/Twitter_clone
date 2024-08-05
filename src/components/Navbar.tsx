@@ -43,6 +43,7 @@ const Navbar = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [moreOptMenu]);
+  
   return (
     <div className="xl:w-[23%] sticky top-0 px-6 max-md:px-3 h-screen items-center max-sm:h-fit bg-black max-sm:py-2">
       <div className="text-3xl mt-4 p-3 w-fit cursor-pointer rounded-full transition duration-300 hover:bg-slate-300 hover:bg-opacity-10 max-lx:mx-auto max-sm:hidden">

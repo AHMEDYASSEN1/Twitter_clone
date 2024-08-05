@@ -5,10 +5,7 @@ import { auth, googleProvider } from "../config/firebase.ts";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-interface SignUpProps {
-  setIsSigned: React.Dispatch<React.SetStateAction<boolean>>;
-}
-const SignUp: React.FC<SignUpProps> = ({ setIsSigned }) => {
+const SignUp = () => {
   const [createAccount, setCreateAccount] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,8 +13,8 @@ const SignUp: React.FC<SignUpProps> = ({ setIsSigned }) => {
   // const user = auth.currentUser;
 
   const [formInputsValidity, setFormInputsValidity] = useState({
-    emailIsValid: true,
-    passwordIsValid: true,
+    emailIsValid: false,
+    passwordIsValid: false,
   });
   const navigate = useNavigate();
 
@@ -52,20 +49,21 @@ const SignUp: React.FC<SignUpProps> = ({ setIsSigned }) => {
       }
       setEmail("");
       setPassword("");
-      setIsSigned(true);
       navigate("/");
     }
   };
 
   const SignUpWithGoogleHandler = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      console.log(user);
+      setEmail("");
+      setPassword("");
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
-    setEmail("");
-    setPassword("");
-    setIsSigned(true);
   };
 
   return (

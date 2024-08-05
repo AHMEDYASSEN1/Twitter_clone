@@ -6,7 +6,7 @@ const TweetList: React.FC = () => {
   const { tweets, isLoading, addtTweet } = useTweets();
 
   return (
-    <div>
+    <div className=" border-x-[1px] border-gray-500 max-sm:border-none">
       {isLoading ? (
         <section>
           <p className=" text-center py-10">

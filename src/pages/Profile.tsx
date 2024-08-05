@@ -40,7 +40,7 @@ const Profile: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen border-x-[1px] border-gray-500 max-sm:border-none">
       <div
         className="bg-cover bg-center h-40 mb-4"
         style={{ backgroundImage: `url(${user?.coverImg})` }}

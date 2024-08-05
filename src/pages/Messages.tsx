@@ -47,7 +47,7 @@ const Messages: React.FC = () => {
   };
 
   return (
-    <div className="flex h-full">
+    <div className="flex h-full border-x-[1px] border-gray-500 max-sm:border-none">
       <div className="w-1/3 border-r-[1px] border-gray-500">
         <h2 className="text-xl font-bold p-4 border-gray-500">
           Messages

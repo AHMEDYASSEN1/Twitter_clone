@@ -1,19 +1,17 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaGoogle } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-interface SignInProps {
-  setIsSigned: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
-const SignIn: React.FC<SignInProps> = ({ setIsSigned }) => {
+const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const [formInputsValidity, setFormInputsValidity] = useState({
-    emailIsValid: true,
-    passwordIsValid: true,
+    emailIsValid: false,
+    passwordIsValid: false,
   });
   const emailValidity = (value: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -37,16 +35,16 @@ const SignIn: React.FC<SignInProps> = ({ setIsSigned }) => {
 
     const formIsValid: boolean =
       formInputsValidity.emailIsValid && formInputsValidity.passwordIsValid;
+
     if (formIsValid && typeof window !== "undefined") {
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        // router.push("/");
       } catch (error) {
         console.log(error);
       }
       setEmail("");
       setPassword("");
-      setIsSigned(true);
+      navigate("/");
     }
   };
 
@@ -54,10 +52,6 @@ const SignIn: React.FC<SignInProps> = ({ setIsSigned }) => {
     <div className="flex flex-col justify-center items-center h-screen">
       <form className="rounded-xl w-[28%] min-w-[350px] px-8 pt-6 pb-8 mb-4 border-[1px] border-gray-600">
         <h2 className="text-2xl font-bold text-center mb-4">Sign in to X</h2>
-        <button className="bg-white py-2 px-8 w-full rounded-full text-black font-semibold flex items-center justify-center gap-2">
-          <FaGoogle />
-          join with google
-        </button>
         <div className="flex items-center my-4">
           <div className="flex-grow h-px bg-gray-600"></div>
           <span className="flex-shrink mx-4 text-gray-600">or</span>
