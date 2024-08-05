@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
+interface SignInProps {
+  setIsSigned: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -44,6 +49,7 @@ const SignIn = () => {
       }
       setEmail("");
       setPassword("");
+      setIsSigned(true);
       navigate("/");
     }
   };
